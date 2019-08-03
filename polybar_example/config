@@ -30,11 +30,12 @@ alert = #bd2c40
 [bar/example]
 ;monitor = ${env:MONITOR:HDMI-1}
 width = 100%
-height = 2%
+height = 2.5%
 ;offset-x = 1%
 ;offset-y = 1%
 radius = 10
 fixed-center = false
+;tray-padding = 0
 
 background = ${colors.background}
 foreground = ${colors.foreground}
@@ -50,19 +51,19 @@ border-top-size = 8
 border-left-size = 5
 border-right-size = 5
 
-padding-left = 0
-padding-right = 0
+padding-left = 1
+padding-right = 1
 
-module-margin-left = 0
-module-margin-right = 0
+module-margin-left = 1
+module-margin-right = 1
 
 font-0 = fixed:pixelsize=10;1
 font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
-font-2 = siji:pixelsize=10;2
+font-2 = siji:pixelsize=10;1
 
 modules-left = bspwm i3
 modules-center = 
-modules-right = filesystem xbacklight alsa pulseaudio xkeyboard memory cpu battery temperature date powermenu
+modules-right = filesystem backlight-acpi alsa pulseaudio memory cpu battery temperature date powermenu
 
 tray-position = right
 tray-padding = 2
@@ -107,8 +108,10 @@ type = internal/fs
 interval = 25
 
 mount-0 = /
+;mount-1= /home
 
-label-mounted = %{F#0a81f5}%mountpoint%%{F-}: %percentage_used%%
+;label-mounted = %{F#0a81f5}%mountpoint%%{F-} %free%
+label-mounted =  %free% 
 label-unmounted = %mountpoint% not mounted
 label-unmounted-foreground = ${colors.foreground-alt}
 
@@ -185,25 +188,32 @@ icon-next = 
 label-song-maxlen = 25
 label-song-ellipsis = true
 
-[module/xbacklight]
-type = internal/xbacklight
+[module/light]
+type = internal/light
 
-format = <label> <bar>
-label = BL
+format = <ramp>
+;format-prefix = ""
+;label = BL
 
-bar-width = 10
-bar-indicator = |
-bar-indicator-foreground = #fff
-bar-indicator-font = 2
-bar-fill = ─
-bar-fill-font = 2
-bar-fill-foreground = #9f78e1
-bar-empty = ─
-bar-empty-font = 2
-bar-empty-foreground = ${colors.foreground-alt}
+ramp-0 = 🌕
+ramp-1 = 🌔
+ramp-2 = 🌓
+ramp-3 = 🌒
+ramp-4 = 🌑
+
+;bar-width = 10
+;bar-indicator = |
+;bar-indicator-foreground = #fff
+;bar-indicator-font = 2
+;bar-fill = ─
+;bar-fill-font = 2
+;bar-fill-foreground = #9f78e1
+;bar-empty = ─
+;bar-empty-font = 2
+;bar-empty-foreground = ${colors.foreground-alt}
 
 [module/backlight-acpi]
-inherit = module/xbacklight
+inherit = module/light
 type = internal/backlight
 card = intel_backlight
 
