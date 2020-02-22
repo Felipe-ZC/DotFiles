@@ -14,8 +14,8 @@ cp -r $FONTS_DIR .
 
 echo "Backing up polybar files..."
 mkdir polybar &> /dev/null 
-cp -r $POLYBAR_DIR ./polybar/
+cp -r $POLYBAR_DIR .
 
 echo "Backing up pictures..."
 mkdir pics &> /dev/null 
-cp -r $PICS_DIR ./pics/
+cp -r $PICS_DIR .
