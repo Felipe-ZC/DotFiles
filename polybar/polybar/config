@@ -18,19 +18,19 @@
 
 [colors]
 ;background = ${xrdb:color0:#222}
-background = #222
+background = #000000
 background-alt = #444
 ;foreground = ${xrdb:color7:#222}
 foreground = #dfdfdf
-foreground-alt = #555
-primary = #ffb52a
+foreground-alt = #9695A9
+primary = #dcdcdc
 secondary = #e60053
 alert = #bd2c40
 
 [bar/example]
-;monitor = ${env:MONITOR:HDMI-1}
+monitor = HDMI-0 
 width = 100%
-height = 2.5%
+height = 1.3%
 ;offset-x = 1%
 ;offset-y = 1%
 ;radius = 10
@@ -59,13 +59,13 @@ padding-right = 1
 module-margin-left = 1
 module-margin-right = 1
 
-font-0 = fixed:pixelsize=10;1
+font-0 = fixed:pixelsize=12;1
 font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
-font-2 = siji:pixelsize=10;1
+font-2 = siji:pixelsize=12;1
 
-modules-left = bspwm i3
+modules-left = i3
 modules-center = 
-modules-right = backlight-acpi alsa pulseaudio filesystem wireless-network memory cpu battery temperature date powermenu
+modules-right = alsa pulseaudio filesystem eth memory cpu temperature date 
 
 tray-position = right
 tray-padding = 2
@@ -135,7 +135,7 @@ mount-0 = /
 ;mount-1= /home
 
 ;label-mounted = %{F#0a81f5}%mountpoint%%{F-} %free%
-label-mounted = %{F#555}%{F-} %free% 
+label-mounted = %{F#9695A9}%{F-} %free% 
 label-unmounted = %mountpoint% not mounted
 label-unmounted-foreground = ${colors.foreground-alt}
 
@@ -246,7 +246,7 @@ type = internal/cpu
 interval = 2
 format-prefix = " "
 format-prefix-foreground = ${colors.foreground-alt}
-format-underline = #f90000
+;format-underline = #f90000
 label = %percentage:2%%
 
 [module/memory]
@@ -254,7 +254,7 @@ type = internal/memory
 interval = 2
 format-prefix = " "
 format-prefix-foreground = ${colors.foreground-alt}
-format-underline = #4bffdc
+;format-underline = #4bffdc
 label = %percentage_used%%
 #padding = 2
 
@@ -282,10 +282,10 @@ ramp-signal-foreground = ${colors.foreground-alt}
 
 [module/eth]
 type = internal/network
-interface = 
+interface = enp24s0 
 interval = 3.0
 
-format-connected-underline = #55aa55
+;format-connected-underline = #55aa55
 format-connected-prefix = " "
 format-connected-prefix-foreground = ${colors.foreground-alt}
 label-connected = %local_ip%
@@ -308,7 +308,7 @@ time-alt = %H:%M:%S
 
 format-prefix = 
 format-prefix-foreground = ${colors.foreground-alt}
-format-underline = #0a6cf5
+;format-underline = #0a6cf5
 
 label = %date% %time%
 
@@ -406,7 +406,7 @@ thermal-zone = 0
 warn-temperature = 60
 
 format = <ramp> <label>
-format-underline = #f50a4d
+;format-underline = #f50a4d
 format-warn = <ramp> <label-warn>
 format-warn-underline = ${self.format-underline}
 
