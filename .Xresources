@@ -3,7 +3,7 @@
 
 ! Fix the Xft dpi to 96; this prevents tiny fonts
 ! or HUGE fonts depending on the screen size.
-Xft.dpi: 96
+!Xft.dpi: 96
 
 ! hintstyle: medium means that (for Postscript fonts) we
 ! position the stems for maximum constrast and consistency
@@ -24,80 +24,169 @@ urxvt256c*background: rgba:0000/0000/0200/c800
 
 urxvt256c.scrollBar: false
 urxvt.scrollBar: false
-URxvt.perl-ext-common: font-size
-! urvxt256c.font: xft: DejaVuSans
-URxvt.font: xft: DroidSansMono:size=9
+URxvt256c.perl-ext-common: font-size
+urxvt256c.perl-ext-common: default,resize-font
+!urvxt256c.font: xft: DejaVuSans
+urxvt256c.font: xft: LiberationMono-Regular:size=14
 
 ! special
-*.foreground:   #d0d0d0
-*.background:   #151515
-*.cursorColor:  #d0d0d0
-
-! black
-*.color0:       #151515
-*.color8:       #505050
-
-! red
-*.color1:       #fb9fb1
-*.color9:       #fb9fb1
-
-! green
-*.color2:       #acc267
-*.color10:      #acc267
-
-! yellow
-*.color3:       #ddb26f
-*.color11:      #ddb26f
-
-! blue
-*.color4:       #6fc2ef
-*.color12:      #6fc2ef
-
-! magenta
-*.color5:       #e1a3ee
-*.color13:      #e1a3ee
-
-! cyan
-*.color6:       #12cfc0
-*.color14:      #12cfc0
-
-! white
-*.color7:       #d0d0d0
-*.color15:      #f5f5f5
-
-!! special
-!*.foreground: #93a1a1
-!*.background: #141c21
-!*.cursorColor: #afbfbf
+!*.foreground:   #dce2d5
+!*.foreground:   #D0D0D0
+!*.background:   #020202
+!!*.background:   #9C9C9C
+!*.cursorColor:  #dce2d5
 
 !! black
-!*.color0: #263640
-!*.color8: #4a697d
+!.color0:       #040403
+!!*.color0:       #9C9C9C
+!*.color8:       #eecfda
 
 !! red
-!*.color1: #d12f2c
-!*.color9: #fa3935
+!*.color1:       #121311
+!*.color9:       #e1aec0
 
 !! green
-!*.color2: #819400
-!*.color10: #a4bd00
+!*.color2:       #242522
+!*.color10:      #8ecaba
 
 !! yellow
-!*.color3: #b08500
-!*.color11: #d9a400
+!*.color3:       #3c3e3a
+!!*.color3:       #F8FFF1
+!*.color11:      #d2bbe7
 
 !! blue
-!*.color4: #2587cc
-!*.color12: #2ca2f5
+!*.color4:       #5b5e58
+!*.color12:      #dcd0e7
 
 !! magenta
-!*.color5: #696ebf
-!*.color13: #8086e8
+!*.color5:       #81847c
+!*.color13:      #e7b7c8
 
 !! cyan
-!*.color6: #289c93
-!*.color14: #33c5ba
+!*.color6:       #acb1a7
+!*.color14:      #d19f6b
 
 !! white
-!*.color7: #bfbaac
-!*.color15: #fdf6e3
+!*.color7:       #dee4d7
+!*.color15:      #f5f5f5
+
+
+! special
+*.foreground:   #c9dde8
+*.background:   #040607
+*.cursorColor:  #c9dde8
+
+! black
+*.color0:       #070c0e
+*.color8:       #aedbf0
+
+! red
+*.color1:       #155E82
+*.color9:       #f9c195
+
+! green
+*.color2:       #9695A9
+*.color10:      #68d7b8
+
+! yellow
+*.color3:       #35434a
+!*.color3:       #155E82
+*.color11:      #d6bbf8
+
+! blue
+*.color4:       #4f636c
+*.color12:      #a5d9f0
+
+! magenta
+*.color5:       #6e8996
+*.color13:      #46bb9d
+
+! cyan
+*.color6:       #93b6c6
+*.color14:      #e4a0bd
+
+! white
+*.color7:       #d5e5ed
+*.color15:      #a2d6ee
+
+
+
+! special
+! special
+! special
+!*.foreground:   #d9dde8
+!*.background:   #030406
+!*.cursorColor:  #d9dde8
+
+!! black
+!*.color0:       #06070c
+!*.color8:       #c97bc0
+
+!! red
+!*.color1:       #11151e
+!*.color9:       #e27b77
+
+!! green
+!!*.color2:       #CDC8FF
+!*.color2:       #ABA4FF
+!*.color10:      #78b784
+
+!! yellow
+!*.color3:       #373f53
+!*.color11:      #87a0d9
+
+!! blue
+!*.color4:       #525e7b
+!*.color12:      #cb8cc3
+
+!! magenta
+!*.color5:       #7484aa
+!*.color13:      #71a47b
+
+!! cyan
+!*.color6:       #a6b0ca
+!*.color14:      #e2a1da
+
+!! white
+!*.color7:       #dfe2ec
+!*.color15:      #9babd5
+
+
+
+
+! special
+!*.foreground:   #d0d0d0
+!*.background:   #151515
+!*.cursorColor:  #d0d0d0
+
+!! black
+!*.color0:       #151515
+!*.color8:       #505050
+
+!! red
+!*.color1:       #fb9fb1
+!*.color9:       #fb9fb1
+
+!! green
+!*.color2:       #acc267
+!*.color10:      #acc267
+
+!! yellow
+!*.color3:       #ddb26f
+!*.color11:      #ddb26f
+
+!! blue
+!*.color4:       #6fc2ef
+!*.color12:      #6fc2ef
+
+!! magenta
+!*.color5:       #e1a3ee
+!*.color13:      #e1a3ee
+
+!! cyan
+!*.color6:       #12cfc0
+!*.color14:      #12cfc0
+
+!! white
+!*.color7:       #d0d0d0
+!*.color15:      #f5f5f5
