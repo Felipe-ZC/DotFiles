@@ -6,16 +6,13 @@ cp $I3_CONF ./i3/
 
 echo "Backing up compton config..."
 mkdir compton &> /dev/null 
-cp $COMPTON_CONF ./compton/compton.conf 
+cp $COMPTON_CONF ./compton/ 
 
 echo "Backing up fonts..."
-mkdir fonts &> /dev/null 
 cp -r $FONTS_DIR .
 
 echo "Backing up polybar files..."
-mkdir polybar &> /dev/null 
 cp -r $POLYBAR_DIR .
 
-echo "Backing up pictures..."
-mkdir pics &> /dev/null 
-cp -r $PICS_DIR .
+#echo "Backing up pictures..."
+#cp -r $PICS_DIR .
