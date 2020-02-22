@@ -1,5 +1,4 @@
 # &> means redirect both stdout and stderr...
-mkdir backup &> /dev/null 
 
 echo "Backing up i3 config..."
 mkdir i3 &> /dev/null 
